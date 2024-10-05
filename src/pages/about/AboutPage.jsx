@@ -1,12 +1,10 @@
 import { useNavigate } from 'react-router-dom';
-import './About.css';
-import Button from './components/Button';
+import './AboutPage.css';
+import Button from '../../components/Button';
+import { PageRoutes } from '../PageRoutes';
 
-function About() {
+function AboutPage() {
   const navigate = useNavigate();
-  const navigateToRoot = () => {
-    navigate('/');
-  };
 
   return (
     <>
@@ -14,7 +12,7 @@ function About() {
       <div className="card">
         <Button
           label="Home"
-          onClick={navigateToRoot}
+          onClick={() => navigate(PageRoutes.Home)}
           color="blue"
           size="large"
         />
@@ -23,4 +21,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutPage;

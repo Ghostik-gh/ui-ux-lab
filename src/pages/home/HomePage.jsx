@@ -1,24 +1,22 @@
 import { useNavigate } from 'react-router-dom';
-import './components/Button';
-import './Home.css';
-import Button from './components/Button';
+import '../../components/Button';
+import './HomePage.css';
+import Button from '../../components/Button';
+import { PageRoutes } from '../PageRoutes';
 
-function Home() {
+function HomePage() {
   const navigate = useNavigate();
-  const navigateToAbout = () => {
-    navigate('/about');
-  };
 
   return (
     <>
       <h1>Furniture</h1>
       <div className="card">
         <p>
-          It's just <code>src/Home.jsx</code>
+          It's just <code>HomePage.jsx</code>
         </p>
         <Button
           label="About"
-          onClick={navigateToAbout}
+          onClick={() => navigate(PageRoutes.About)}
           color="blue"
           size="large"
         />
@@ -27,4 +25,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomePage;

@@ -3,7 +3,12 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://ghostik-gh.github.io/ui-ux-lab",
+  "homepage": "ui-ux-lab",
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ghostik-gh/ui-ux-lab.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

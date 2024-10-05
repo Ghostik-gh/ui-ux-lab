@@ -1,15 +1,17 @@
 import './App.css';
-import About from './About.jsx';
-import Home from './Home.jsx';
+import AboutPage from './pages/about/AboutPage.jsx';
+import HomePage from './pages/home/HomePage.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NotFoundPage from './pages/notFound/NotFoundPage.jsx';
 
 function App() {
   return (
     <>
       <BrowserRouter basename="/ui-ux-lab">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </>
